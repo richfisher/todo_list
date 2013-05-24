@@ -3,7 +3,9 @@ window.TodoList =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: -> 
+  	new TodoList.Routers.Tasks
+  	Backbone.history.start()
 
 $(document).ready ->
   TodoList.initialize()
