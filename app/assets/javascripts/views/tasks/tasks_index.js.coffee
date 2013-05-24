@@ -8,4 +8,4 @@ class TodoList.Views.TasksIndex extends Backbone.View
 
   	@collection.each (task) =>
   		# view = new TodoList.Views.TasksItem model: task
-  		alert '123'
+  		$('#tasks').append('123')
