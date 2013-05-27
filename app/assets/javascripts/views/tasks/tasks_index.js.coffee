@@ -1,5 +1,5 @@
 class TodoList.Views.TasksIndex extends Backbone.View
-
+  el: '#app'
   template: JST['tasks/index']
   initialize: ->
   	@collection.bind 'reset', @render, @
@@ -7,5 +7,5 @@ class TodoList.Views.TasksIndex extends Backbone.View
   	$('body').html(@template())
 
   	@collection.each (task) =>
-  		# view = new TodoList.Views.TasksItem model: task
-  		$('#tasks').append('123')
+  		view = new TodoList.Views.TasksItem model: task
+  		$('#tasks').append(view.render())

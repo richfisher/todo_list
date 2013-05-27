@@ -1,1 +1,1 @@
-123
+<%= @task.get 'name' %> <br />
