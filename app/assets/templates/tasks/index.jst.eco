@@ -1,2 +1,8 @@
 <h1>Task List</h1>
+
+<form id="new_task">
+  <input type="text" name="name" id="new_task_name">
+  <input type="submit" value="Add">
+</form>
+
 <div id="tasks"></div>

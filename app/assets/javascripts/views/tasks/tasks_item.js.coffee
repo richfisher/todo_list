@@ -1,11 +1,16 @@
 class TodoList.Views.TasksItem extends Backbone.View
   template: JST['tasks/item']
+  tagName: 'li'
 
   events:
-    'click': 'showEntry'
+    'click .title': 'showTask'
+    'click .destroy': 'destroyTask'
 
-  showEntry: ->
+  showTask: ->
     Backbone.history.navigate("tasks/#{@model.get('id')}", true)
+
+  destroyTask: ->
+    @model.destroy()
 
   render: ->
     $(@el).html(@template(task: @model))

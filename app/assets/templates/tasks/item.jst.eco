@@ -1,1 +1,3 @@
-<%= @task.get 'name' %> <br />
+<span class="title"><%= @task.get 'name' %></span>
+
+<span class="destroy">X</span>
