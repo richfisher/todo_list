@@ -1,3 +1,3 @@
 class TodoList.Collections.Tasks extends Backbone.Collection
-	url: "/tasks"
+	url: "/api/tasks"
 	model: TodoList.Models.Task

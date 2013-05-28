@@ -1,5 +1,10 @@
 TodoList::Application.routes.draw do
-  resources :tasks
+  scope 'api' do
+    resources :tasks
+  end
+
+  root :to=>'home#index'
+  match '*path', to: 'home#index'
 
 
   # The priority is based upon order of creation:
