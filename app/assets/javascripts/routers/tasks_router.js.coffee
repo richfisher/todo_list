@@ -1,12 +1,17 @@
 class TodoList.Routers.Tasks extends Backbone.Router
-	routes: 
-		'tasks': 'index'
-		'tasks/:id': 'show'
+  routes: 
+    'tasks': 'index'
+    'tasks/:id': 'show'
 
-	index: ->
-		tasks = new TodoList.Collections.Tasks
-		new TodoList.Views.TasksIndex collection: tasks
-		tasks.fetch(reset: true)
+  initialize: ->
+    @collection = new TodoList.Collections.Tasks
+    @collection.fetch(reset: true)
 
-	show: (id) ->
-		alert "task #{id}"
+  index: ->
+    view = new TodoList.Views.TasksIndex collection: @collection
+    $('#app').html(view.render().el)
+
+  show: (id) ->
+    task = @collection.get(id)
+    view = new TodoList.Views.TasksShow model: task
+    $('#app').html(view.render().el)

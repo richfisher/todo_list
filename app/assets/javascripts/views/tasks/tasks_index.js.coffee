@@ -1,5 +1,4 @@
 class TodoList.Views.TasksIndex extends Backbone.View
-  el: '#app'
   template: JST['tasks/index']
 
   events:
