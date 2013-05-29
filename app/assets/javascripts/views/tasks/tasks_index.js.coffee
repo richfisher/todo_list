@@ -16,7 +16,7 @@ class TodoList.Views.TasksIndex extends Backbone.View
     
   appendTask: (task) =>
     view = new TodoList.Views.TasksItem(model: task)
-    @$('#tasks').append(view.render().el)
+    this.$('#tasks').append(view.render().el)
 
   createTask: (event) ->
     event.preventDefault()

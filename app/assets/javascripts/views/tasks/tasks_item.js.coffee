@@ -3,7 +3,7 @@ class TodoList.Views.TasksItem extends Backbone.View
   tagName: 'li'
 
   events:
-    'click .title': 'showTask'
+    'click .title':   'showTask'
     'click .destroy': 'destroyTask'
 
   showTask: ->

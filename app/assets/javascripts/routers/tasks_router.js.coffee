@@ -1,8 +1,8 @@
 class TodoList.Routers.Tasks extends Backbone.Router
   routes: 
-    'tasks': 'index'
-    'tasks/:id': 'show'
-    '*path': 'redirect_to_tasks'
+    'tasks':      'index'
+    'tasks/:id':  'show'
+    '*path':      'redirect_to_tasks'
 
   initialize: ->
     @collection = new TodoList.Collections.Tasks
